@@ -16,7 +16,7 @@ namespace leeviuotinen
                 .UseKestrel()
                 .UseStartup<Startup>()
                 .UseConfiguration(config)
-                .UseUrls("http://*:80;http://0.0.0.0:80")
+                .UseUrls("http://*:80")
                 .Build();
 
             host.Run();
