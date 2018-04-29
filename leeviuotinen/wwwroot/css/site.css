@@ -1,6 +1,42 @@
-﻿html,
+﻿@font-face {
+    font-family: 'Open Sans';
+    src: url('/fonts/Open Sans/OpenSans-Regular.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('/fonts/Open Sans/OpenSans-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+    /* font-display: block; */
+}
+
+@keyframes opacityFadeInWithDelay {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+html,
 body {
     height: 100%;
+}
+
+.preload p,
+.preload a,
+.preload h1 {
+    opacity: 0;
+}
+
+:not(.preload) p,
+:not(.preload) a,
+:not(.preload) h1 {
+    animation-name: opacityFadeInWithDelay;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
 }
 
 .preload-plus-2s * {
@@ -8,7 +44,7 @@ body {
 }
 
 body {
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 26px;
     margin: 0;
@@ -78,6 +114,7 @@ li {
     border-radius: 50%;
     width: 100px;
     height: 100px;
+    transform-origin: top center;
 }
 
 @media only screen and (max-width: 520px) {
@@ -129,24 +166,24 @@ header {
         width: 360px;
         padding-top: 52px;
     }
-} 
+}
 
 nav {
     margin-top: 18px;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
 
 @media only screen and (max-width: 520px) {
     nav li {
         display: inline-block;
         margin-bottom: 0;
     }
-} 
+}
 
 nav a {
     display: block;

@@ -1,12 +1,16 @@
 ﻿window.addEventListener(
     "load",
     function (s, e) {
+
+        var bodyClassList = document
+            .querySelector("body")
+            .classList;
+
+        bodyClassList.remove("preload");
+        
         setTimeout(
             function () {
-                document
-                    .querySelector("body")
-                    .classList
-                    .remove("preload-plus-2s");
+                bodyClassList.remove("preload-plus-2s");
             },
             2000);
     });
