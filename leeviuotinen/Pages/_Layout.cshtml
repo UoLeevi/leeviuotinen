@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body class="preload-plus-2s">
+    <div class="site">
+        <header>
+            <img class="profile-picture" src="~/img/leevi-100.png" alt="Leevi Uotinen" />
+
+            <nav>
+                <ul>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="/Contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+
+            @RenderBody()
+
+        </main>
+
+        <footer>
+            <p>© @DateTime.Today.Year Leevi Uotinen. All Rights Reserved</p>
+        </footer>
+    </div><!-- .site -->
+    <script src="~/js/site.js"></script>
+</body>
+</html>
