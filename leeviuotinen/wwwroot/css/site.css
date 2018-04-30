@@ -26,13 +26,17 @@ body {
 
 .preload p,
 .preload a,
-.preload h1 {
+.preload h1,
+.preload h2,
+.preload li {
     opacity: 0;
 }
 
 :not(.preload) p,
 :not(.preload) a,
-:not(.preload) h1 {
+:not(.preload) h1,
+:not(.preload) h2,
+:not(.preload) li {
     animation-name: opacityFadeInWithDelay;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
@@ -80,10 +84,24 @@ img {
 
 a {
     transition: color 180ms ease-out;
+    color: #222;
+    text-decoration: underline;
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0 0 26px;
+}
+
+h1 {
+    font-size: 1.6em;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+ul {
+    list-style: disc;
 }
 
 p {
