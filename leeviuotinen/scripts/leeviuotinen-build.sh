@@ -2,7 +2,7 @@ sudo systemctl stop leeviuotinen.service
 sudo rm -f /etc/systemd/system/leeviuotinen.service
 
 unset PID
-PID=$(ps aux | grep '[d]otnet leeviuotinen.dll' | awk '{print $2}')
+PID=$(ps aux | grep '[l]eeviuotinen.dll' | awk '{print $2}')
 if [ ! -z "$PID" ]; then while sudo kill $PID; do sleep 1; done; fi
 unset PID
 
