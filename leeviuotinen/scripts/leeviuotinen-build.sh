@@ -14,4 +14,5 @@ sudo dotnet publish -o /var/aspnetcore/leeviuotinen-app -c Release
 cd /var/aspnetcore/leeviuotinen-app
 sudo rm -r /var/aspnetcore/leeviuotinen
 
-sudo systemctl start leeviuotinen.service
+sudo systemctl daemon-reload
+sudo systemctl restart leeviuotinen.service
