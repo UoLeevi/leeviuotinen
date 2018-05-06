@@ -1,5 +1,7 @@
-# Stop currently runing service
-sudo systemctl stop leeviuotinen.service
+# Stop currently runing service if it is runing as a service
+if sudo systemctl is-active --quiet leeviuotinen.service
+then sudo systemctl stop leeviuotinen.service
+fi
 
 # Remove previous version of the service file
 sudo rm -f /etc/systemd/system/leeviuotinen.service
@@ -7,7 +9,11 @@ sudo rm -f /etc/systemd/system/leeviuotinen.service
 # Stop currently runing leeviuotinen.dll if it wasn't runing as a service
 unset PID
 PID=$(ps aux | grep '[l]eeviuotinen.dll' | awk '{print $2}')
-if [ ! -z "$PID" ]; then while sudo kill $PID; do sleep 1; done; fi
+if [ ! -z "$PID" ]
+then while sudo kill $PID
+do sleep 1
+done
+fi
 unset PID
 
 # Change to directory with leeviuotinen.csproj
