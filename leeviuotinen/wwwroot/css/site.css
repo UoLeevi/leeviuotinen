@@ -43,7 +43,7 @@ body {
     animation-play-state: running;
 }
 
-.preload-plus-2s * {
+.preload * {
     transition: none !important;
 }
 
@@ -141,13 +141,13 @@ li {
 
 @media only screen and (max-width: 520px) {
     .profile-picture {
-        transform: scale(.65);
+        transform: scale(.7);
     }
 }
 
 @media only screen and (min-width: 520px) {
     .profile-picture {
-        transform: scale(.35);
+        transform: scale(.5);
     }
 }
 
@@ -205,14 +205,16 @@ nav {
         display: inline-block;
         margin-bottom: 0;
     }
+
+    nav a {
+    }
 }
 
 nav a {
     display: block;
     text-decoration: none;
     font-weight: 700;
-    color: #000;
-    padding: 0 20px;
+    padding: 0;
 }
 
     nav a:hover {
@@ -249,3 +251,26 @@ footer {
         white-space: nowrap;
         margin: 0 auto;
     }
+
+    footer .col-center {
+        display: inline-block;
+    }
+
+    footer .col-left {
+        float: left;
+        width: 33%;
+    }
+
+    footer .col-right {
+        float: right;
+        width: 33%;
+    }
+
+svg.icon-small {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    fill: #b5b5b5;
+}
