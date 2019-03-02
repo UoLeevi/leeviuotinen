@@ -11,13 +11,13 @@
         <p>Most of my projects can also be found on <a href="https://github.com/UoLeevi">GitHub</a>.</p>
         <div></div>
       </div>
-      <div class="uo-pg"></div>
+      <div class="uo-bg"></div>
     </header>
     <main class="uo-main">
       <div class="uo-content">
         <section>
           <article>
-            <h2>Project Fina</h2>
+            <h2><a href="https://projectfina.com">Project Fina</a></h2>
             <p>This project is an attempt to combine two of my passions, finance and technology, to build a platform for better investment portfolio management. There are still few todo items to tackle but once ready, <b>Project Fina</b> will help you to make smarter investments. At <b>projectfina.com</b> you can create watchlists, set alerts, perform analytics and make notes about financial instruments.
             </p>
           </article>
@@ -30,7 +30,7 @@
         </section>
         <section>
           <article>
-            <h2>libuo</h2>
+            <h2><a href="https://github.com/UoLeevi/libuo#readme">libuo</a></h2>
             <p>This is the C library that provides the building blocks for many of my software projects. <b>libuo</b> aims to be a modular, cross-platform, high-performance C library that raises the level of abstraction of C programming just enough to enable the programmer to be productive and able to write code that is also readable and extensible.</p>
           </article>
         </section>
@@ -140,7 +140,11 @@ export default {
   color: #ffffff;
 }
 
-.uo-header > .uo-pg {
+.uo-header a:hover {
+  box-shadow: 0px -3px 0px #ffffff inset;
+}
+
+.uo-header > .uo-bg {
   position: absolute;
   overflow: visible;
   left: -50px;
@@ -201,12 +205,14 @@ b {
 }
 
 a {
-  font-weight: 400;
+  color: #000;
   text-decoration: none;
+  transition: all 200ms ease-in-out;
+  box-shadow: 0px -3px 0px transparent inset;
 }
 
 a:hover {
-  text-decoration: underline;
+  box-shadow: 0px -3px 0px #1081f6 inset;
 }
 
 @keyframes tilt {
